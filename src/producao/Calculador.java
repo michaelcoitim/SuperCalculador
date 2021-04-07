@@ -5,9 +5,11 @@
  */
 package producao;
 
+import java.awt.Color;
+
 /**
  *
- * @author micha
+ * @author Michael Coitim
  */
 public class Calculador extends javax.swing.JFrame {
 
@@ -44,92 +46,102 @@ public class Calculador extends javax.swing.JFrame {
         lblResAbs = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setForeground(new java.awt.Color(27, 27, 27));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/calc.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(328, 154, 153, 159);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 154, -1, -1));
 
         btncalc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btncalc.setForeground(new java.awt.Color(0, 0, 153));
         btncalc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btncalc.jpg"))); // NOI18N
         btncalc.setText("Calcular");
-        getContentPane().add(btncalc);
-        btncalc.setBounds(327, 62, 154, 66);
+        btncalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncalcActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btncalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 62, 154, 66));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel2.setText("Super Calculadora");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(57, 0, 181, 26);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setText("Informe um valor");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 62, 93, 15);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 62, -1, -1));
 
         vValor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         vValor.setModel(new javax.swing.SpinnerNumberModel());
-        getContentPane().add(vValor);
-        vValor.setBounds(133, 59, 47, 22);
+        getContentPane().add(vValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 59, 80, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel4.setText("Resto da Divisão por 2 ");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 145, 125, 15);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 145, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel5.setText("Elevado ao Cubo");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 178, 91, 15);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 178, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel6.setText("Raiz Quadrada");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 211, 76, 15);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 211, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setText("Raiz Cúbica");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 244, 59, 15);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 244, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel8.setText("Valor Abisoluto");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 277, 81, 15);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 277, -1, -1));
 
         lblResDiv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblResDiv.setForeground(new java.awt.Color(204, 204, 204));
         lblResDiv.setText("0");
-        getContentPane().add(lblResDiv);
-        lblResDiv.setBounds(183, 145, 7, 15);
+        getContentPane().add(lblResDiv, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 145, 130, -1));
 
         lblResCubo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblResCubo.setForeground(new java.awt.Color(204, 204, 204));
         lblResCubo.setText("0");
-        getContentPane().add(lblResCubo);
-        lblResCubo.setBounds(183, 178, 7, 15);
+        getContentPane().add(lblResCubo, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 178, 120, -1));
 
         lblResQuadado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblResQuadado.setForeground(new java.awt.Color(204, 204, 204));
         lblResQuadado.setText("0");
-        getContentPane().add(lblResQuadado);
-        lblResQuadado.setBounds(183, 211, 7, 15);
+        getContentPane().add(lblResQuadado, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 211, 110, -1));
 
         lblResRaizCubica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblResRaizCubica.setForeground(new java.awt.Color(204, 204, 204));
         lblResRaizCubica.setText("0");
-        getContentPane().add(lblResRaizCubica);
-        lblResRaizCubica.setBounds(183, 244, 7, 15);
+        getContentPane().add(lblResRaizCubica, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 244, 130, -1));
 
         lblResAbs.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblResAbs.setForeground(new java.awt.Color(204, 204, 204));
         lblResAbs.setText("0");
-        getContentPane().add(lblResAbs);
-        lblResAbs.setBounds(183, 277, 7, 15);
+        getContentPane().add(lblResAbs, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 277, 120, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btncalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcActionPerformed
+        
+        double valor = Double.parseDouble(vValor.getValue().toString());
+        
+        lblResDiv.setText(Double.toString(valor % 2));
+        lblResDiv.setForeground(Color.blue);
+        
+        lblResCubo.setText(Double.toString(Math.pow( valor,3)));
+        lblResCubo.setForeground(Color.blue);
+                
+        lblResQuadado.setText(String.format ("%.2f",(Math.sqrt(valor))));
+        lblResQuadado.setForeground(Color.blue);
+        
+        lblResRaizCubica.setText(String.format("%.2f", (Math.cbrt(valor))));
+        lblResRaizCubica.setForeground(Color.blue);
+        
+        lblResAbs.setText(Double.toString(Math.abs(valor)));
+        lblResAbs.setForeground(Color.blue);
+    }//GEN-LAST:event_btncalcActionPerformed
 
     /**
      * @param args the command line arguments
