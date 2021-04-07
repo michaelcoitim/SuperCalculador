@@ -126,19 +126,19 @@ public class Calculador extends javax.swing.JFrame {
     private void btncalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcActionPerformed
         
         double valor = Double.parseDouble(vValor.getValue().toString());
-        
+        // resto da divisão
         lblResDiv.setText(Double.toString(valor % 2));
         lblResDiv.setForeground(Color.blue);
-        
+        // elevado ao cubo
         lblResCubo.setText(Double.toString(Math.pow( valor,3)));
         lblResCubo.setForeground(Color.blue);
-                
+        //raiz quadrada       
         lblResQuadado.setText(String.format ("%.2f",(Math.sqrt(valor))));
         lblResQuadado.setForeground(Color.blue);
-        
+        // raiz cúbica
         lblResRaizCubica.setText(String.format("%.2f", (Math.cbrt(valor))));
         lblResRaizCubica.setForeground(Color.blue);
-        
+        // valor abs 
         lblResAbs.setText(Double.toString(Math.abs(valor)));
         lblResAbs.setForeground(Color.blue);
     }//GEN-LAST:event_btncalcActionPerformed
