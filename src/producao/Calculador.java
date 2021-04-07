@@ -28,38 +28,105 @@ public class Calculador extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btncalc = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        vValor = new javax.swing.JSpinner();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        lblResDiv = new javax.swing.JLabel();
+        lblResCubo = new javax.swing.JLabel();
+        lblResQuadado = new javax.swing.JLabel();
+        lblResRaizCubica = new javax.swing.JLabel();
+        lblResAbs = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel1.setForeground(new java.awt.Color(27, 27, 27));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/calc.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(328, 154, 153, 159);
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 153));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btncalc.jpg"))); // NOI18N
-        jButton2.setText("Calcular");
+        btncalc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btncalc.setForeground(new java.awt.Color(0, 0, 153));
+        btncalc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/btncalc.jpg"))); // NOI18N
+        btncalc.setText("Calcular");
+        getContentPane().add(btncalc);
+        btncalc.setBounds(327, 62, 154, 66);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(314, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(37, 37, 37))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jButton2)
-                .addGap(56, 56, 56)
-                .addComponent(jLabel1)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel2.setText("Super Calculadora");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(57, 0, 181, 26);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setText("Informe um valor");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(30, 62, 93, 15);
+
+        vValor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        vValor.setModel(new javax.swing.SpinnerNumberModel());
+        getContentPane().add(vValor);
+        vValor.setBounds(133, 59, 47, 22);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setText("Resto da Divisão por 2 ");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 145, 125, 15);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setText("Elevado ao Cubo");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(30, 178, 91, 15);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel6.setText("Raiz Quadrada");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(30, 211, 76, 15);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setText("Raiz Cúbica");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(30, 244, 59, 15);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel8.setText("Valor Abisoluto");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(30, 277, 81, 15);
+
+        lblResDiv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblResDiv.setForeground(new java.awt.Color(204, 204, 204));
+        lblResDiv.setText("0");
+        getContentPane().add(lblResDiv);
+        lblResDiv.setBounds(183, 145, 7, 15);
+
+        lblResCubo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblResCubo.setForeground(new java.awt.Color(204, 204, 204));
+        lblResCubo.setText("0");
+        getContentPane().add(lblResCubo);
+        lblResCubo.setBounds(183, 178, 7, 15);
+
+        lblResQuadado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblResQuadado.setForeground(new java.awt.Color(204, 204, 204));
+        lblResQuadado.setText("0");
+        getContentPane().add(lblResQuadado);
+        lblResQuadado.setBounds(183, 211, 7, 15);
+
+        lblResRaizCubica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblResRaizCubica.setForeground(new java.awt.Color(204, 204, 204));
+        lblResRaizCubica.setText("0");
+        getContentPane().add(lblResRaizCubica);
+        lblResRaizCubica.setBounds(183, 244, 7, 15);
+
+        lblResAbs.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblResAbs.setForeground(new java.awt.Color(204, 204, 204));
+        lblResAbs.setText("0");
+        getContentPane().add(lblResAbs);
+        lblResAbs.setBounds(183, 277, 7, 15);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,7 +167,20 @@ public class Calculador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btncalc;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel lblResAbs;
+    private javax.swing.JLabel lblResCubo;
+    private javax.swing.JLabel lblResDiv;
+    private javax.swing.JLabel lblResQuadado;
+    private javax.swing.JLabel lblResRaizCubica;
+    private javax.swing.JSpinner vValor;
     // End of variables declaration//GEN-END:variables
 }
